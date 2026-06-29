@@ -1,0 +1,75 @@
+.big {
+    height: 85vh;
+    background-image: url("大小粉/大小粉3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.big h2 {
+    font-size: 25px;
+}
+.big p {
+    font-size: 22px;
+    color: palevioletred;
+    margin: 10px;
+}
+.big a {
+    font-size: 20px;
+    color: darkblue;
+    text-decoration: none;
+    border: 1px solid midnightblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.big a:hover{
+    text-decoration: underline;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rebeccapurple;
+    border: 5px white solid;
+    padding: 30px 0 20px 50px;
+    margin: 30px;
+    height: 60px;
+    width: 92%;
+    position: relative;
+}
+h1 {
+    color: pink;
+}
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 110px;
+}
+header li{
+    color: pink;
+    text-decoration: none;
+    display: inline;
+    margin-right: 2vw;
+}
+header li:hover {
+    text-decoration: underline;
+}
+h2 {
+color:#4A2F24;
+}
+p {
+color:purple;
+}
+section, footer {
+    background-color: floralwhite;
+    border: 5px white solid;
+    padding: 30px 0 20px 50px;
+    margin: 30px;
+}
