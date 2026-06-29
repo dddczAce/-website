@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name = "viewpoint" content = "width=device-width, initial-scale = 1.0">
+  <title>大小粉是我</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <h1><strong>你好，我是大小粉！</strong></h1>
+  <nav>
+  <ul>
+    <li><a href="#appearance">我的样子</a></li>
+    <li><a href="#origin">我的来历</a></li>
+    <li><a href="#hobby">我的爱好</a></li>
+    <li><a href="#descendant">大小粉二代目</a></li>
+  </ul>
+  </nav>
+  </header>
+  <main>
+  <section class="big" id="appearance">
+  <h2>我是一只很可爱的毛绒绒哦<br>希望你能够从这个网站里了解我！</h2>
+  <p><em>不要叫我粉色老鼠...</em></p>
+  <p><a href="#">说你好啊！</a></p>
+  </section>
+  <section class="page" id="origin">
+    <h3>
+      我的来历
+    </h3>
+    <p>产地：河北石家庄<br>姓名：大小粉<br>年龄：19岁!(是一只老熊了呢...)<br>外表：粉色的，毛茸茸的<a>（非常可爱就是鼻子尖尖的）</a></p>
+  </section>
+  <section class="page" id="hobby">
+    <h3>
+      我的爱好
+    </h3>
+    <p>我喜欢吃东西，喜欢睡觉，喜欢玩耍，喜欢和Ace互动！</p>
+  </section>
+
+  </main>
+  <footer>
+    2026 Ace1e1e1e工作室 -_-
+  </footer>
+  <script>
+    const io= new IntersectionObserver((entries)=>{
+      let entry = entries.reduce((a,b)=>{
+        return a.intersectionRatio > b.intersectionRatio ? a : b})
+        // 选出可见度最大的元素
+        let id = entry.target.getAttribute('id')
+        
+        document .querySelectorAll('nav a').forEach(a => {
+          a.classList.remove('active')
+        })
+        document.querySelector(`a[href="#${id}"]`).
+        classList.add('active')
+    },{
+        root:null,
+        rootMargin:'0px',
+        threshold:0.6
+    })
+    const pages = document.querySelectorAll('.page, .big')
+    pages.forEach(page => {
+      io.observe(page)
+    })
+  
+  </script>
+</body>
+</html>
